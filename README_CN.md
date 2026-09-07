@@ -20,6 +20,8 @@
 | [**mimosa**](./plugins/mimosa) | `developer-tools` | 本地优先的代码安全防线，提供写入前 Hook、复查与 Git 门禁、安全命令和可选密封深扫。 |
 | [**github**](./plugins/github) | `developer-tools` | 基于 GitHub CLI 的工作流，覆盖提交、Pull Request、Issue、Release、Actions、仓库和 Codespaces。 |
 | [**gitlab**](./plugins/gitlab) | `developer-tools` | 基于 `glab` 的 GitLab 工作流，覆盖 MR、Issue、CI/CD、仓库、Release 和 API，并支持自托管实例。 |
+| [**alibaba-cloud-cli**](./plugins/alibaba-cloud-cli) | `developer-tools` | 阿里云 CLI 工作流：引导安装最新版 aliyun、配置凭证与 profile，并安全执行云资源查询和操作。 |
+| [**lark-cli**](./plugins/lark-cli) | `utilities` | Lark CLI 工作流：覆盖文档、表格、多维表格、日历、消息等 SaaS 资源，并引导应用配置与 OAuth 登录。 |
 | [**video2code**](./plugins/video2code) | `productivity` | 从网页录屏或 URL 复刻网页：内置 WebView 录制、逐帧观察、脚手架 React 项目，并与源视频对照验证。 |
 
 ### 金融插件
@@ -48,9 +50,9 @@ agent + 领域 skill」的组合；除 `accounting-and-reporting` 外都带远�
 
 | 分类 | 适用范围 | 当前插件 |
 | --- | --- | --- |
-| `developer-tools` | 开发、代码质量、Git、CI 和工程工作流 | `cloudbase-skills`、`mimosa`、`github`、`gitlab` |
+| `developer-tools` | 开发、代码质量、Git、CI 和工程工作流 | `cloudbase-skills`、`mimosa`、`github`、`gitlab`、`alibaba-cloud-cli` |
 | `productivity` | 计划、知识工作和个人工作流自动化 | `video2code` |
-| `utilities` | 不属于其他分类的通用工具 | — |
+| `utilities` | 不属于其他分类的通用工具 | `lark-cli` |
 | `finance` | 金融领域工作流：行情、财务、风险与金融科技集成 | `write-research`、`read-macro`、`assess-credit`、`pick-funds`、`watch-positions`、`model-deals`、`vet-companies`、`find-clients`、`run-fpa`、`accounting-and-reporting` |
 | `guides` | 文档、学习和参考类插件 | — |
 | `other` | 不适合以上分类的插件 | — |
