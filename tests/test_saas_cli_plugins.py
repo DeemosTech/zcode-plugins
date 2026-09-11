@@ -99,7 +99,7 @@ class SaaSCLIPluginContract(unittest.TestCase):
                 self.assertEqual(
                     entry["description_i18n"], zcode["description_i18n"]
                 )
-                self.assertEqual(entry["category"], "utilities" if name == "lark-cli" else "developer-tools")
+                self.assertEqual(entry["category"], "productivity" if name == "lark-cli" else "developer-tools")
 
     def test_each_plugin_contains_only_cli_skills_and_required_docs(self) -> None:
         allowed = {
