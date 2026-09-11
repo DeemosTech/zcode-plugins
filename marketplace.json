@@ -446,6 +446,11 @@
     },
     {
       "name": "alibaba-cloud-cli",
+      "displayName": "Alibaba Cloud CLI",
+      "displayName_i18n": {
+        "en": "Alibaba Cloud CLI",
+        "zh-CN": "阿里云 CLI"
+      },
       "source": "./plugins/alibaba-cloud-cli",
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/alibaba-cloud-cli/icon.png",
       "description": "Alibaba Cloud CLI workflows with guided installation, credential setup, profile checks, and safe cloud resource operations.",
@@ -474,7 +479,7 @@
       "displayName": "Lark CLI",
       "displayName_i18n": {
         "en": "Lark CLI",
-        "zh-CN": "Lark CLI"
+        "zh-CN": "飞书 CLI"
       },
       "source": "./plugins/lark-cli",
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/lark-cli/icon.png",

@@ -79,7 +79,7 @@ class SaaSCLIPluginContract(unittest.TestCase):
         self.assertFalse((ROOT / "assets" / "feishu-cli").exists())
         self.assertEqual(entries["lark-cli"]["displayName"], "Lark CLI")
         self.assertEqual(entries["lark-cli"]["displayName_i18n"],
-                         {"en": "Lark CLI", "zh-CN": "Lark CLI"})
+                         {"en": "Lark CLI", "zh-CN": "飞书 CLI"})
 
         for name in PLUGIN_SPECS:
             with self.subTest(plugin=name):
