@@ -1,6 +1,6 @@
 {
   "name": "tencent-meeting-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
   "description_i18n": {
     "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",

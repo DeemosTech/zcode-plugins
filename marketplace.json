@@ -507,6 +507,11 @@
     },
     {
       "name": "tencent-meeting-cli",
+      "displayName": "Tencent Meeting CLI",
+      "displayName_i18n": {
+        "en": "Tencent Meeting CLI",
+        "zh-CN": "腾讯会议 cli"
+      },
       "source": "./plugins/tencent-meeting-cli",
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tencent-meeting-cli/icon.png",
       "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
@@ -514,7 +519,7 @@
         "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
         "zh-CN": "腾讯会议 CLI 工作流：OAuth2 授权、会议管理、录制管理和参会报告查询。"
       },
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Z.ai",
         "url": "https://z.ai"
