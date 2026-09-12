@@ -1,4 +1,4 @@
-# 腾讯会议 cli
+# 腾讯会议 CLI
 
 这是腾讯官方 [tencentmeeting-cli](https://github.com/TencentCloud/tencentmeeting-cli) 的轻量 Skill 封装，不捆绑二进制、MCP 服务或腾讯会议凭证。
 

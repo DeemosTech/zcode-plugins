@@ -864,9 +864,9 @@
     "name": "gitlab",
     "icon": "gitlab/icon.png",
     "source": "https://about.gitlab.com/images/press/gitlab-logo-500-rgb.png",
-    "matchedBy": "official-gitlab-press-kit-logomark-resized",
+    "matchedBy": "official-gitlab-press-kit-logomark-trimmed-centered-176px",
     "mimeType": "image/png",
-    "sha256": "f1ba2e843d2b4686b60be31c272f176391285c1ceac365468b9651e5a9b6b046"
+    "sha256": "b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5"
   },
   {
     "name": "gopls-lsp",
