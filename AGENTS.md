@@ -69,3 +69,7 @@ Keep secrets, private endpoints, customer data, machine-specific paths, and unre
 - Hook events, matchers, input/output contracts, or exit codes: [Section 4 — Hooks guide](docs/PLUGIN_DEVELOPMENT.md#4-hooks-guide)
 - Documentation structure and Agent-facing writing: [Section 5 — Writing for people and Agents](docs/PLUGIN_DEVELOPMENT.md#5-writing-for-people-and-agents)
 - Contribution and review requirements: [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Change Scope Reminder
+
+When adding a plugin, keep the merge request focused on the plugin package and its required root marketplace entry. Do not add an outer repository `docs/` directory or unrelated documentation files unless the user explicitly requests them.

@@ -4,7 +4,7 @@
 
 This plugin is a lightweight Skill wrapper around the official [Alibaba Cloud CLI](https://github.com/aliyun/aliyun-cli) (`aliyun`). It uses the user's local CLI and does not bundle a binary, MCP server, or cloud credentials.
 
-Wrapper maintained by Z.ai, version 0.1.1; this is not a vendor-published plugin. Upstream CLI software, documentation, and trademarks remain attributed to their respective owners.
+Wrapper maintained by Z.ai, version 0.1.2; this is not a vendor-published plugin. Upstream CLI software, documentation, and trademarks remain attributed to their respective owners.
 
 ## Quick setup
 

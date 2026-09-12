@@ -4,7 +4,7 @@
 
 本插件是官方 [Alibaba Cloud CLI](https://github.com/aliyun/aliyun-cli)（命令 `aliyun`）的轻量 Skill 封装：只调用用户本机 CLI，不内置 CLI 二进制、MCP 或云端凭证。
 
-封装由 Z.ai 维护，版本 0.1.1；这不是上游厂商发布的插件。上游 CLI、文档和商标仍归对应厂商所有。
+封装由 Z.ai 维护，版本 0.1.2；这不是上游厂商发布的插件。上游 CLI、文档和商标仍归对应厂商所有。
 
 ## 快速 setup
 

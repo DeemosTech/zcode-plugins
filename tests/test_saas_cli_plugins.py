@@ -89,7 +89,7 @@ class SaaSCLIPluginContract(unittest.TestCase):
                 entry = entries[name]
 
                 self.assertEqual(zcode, claude)
-                self.assertEqual(zcode["version"], "0.1.2" if name == "lark-cli" else "0.1.1")
+                self.assertEqual(zcode["version"], "0.1.2")
                 self.assertEqual(zcode["author"], {"name": "Z.ai", "url": "https://z.ai"})
                 self.assertEqual(entry["author"], zcode["author"])
                 self.assertEqual(zcode["name"], name)

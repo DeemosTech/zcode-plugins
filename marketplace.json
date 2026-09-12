@@ -453,12 +453,12 @@
       },
       "source": "./plugins/alibaba-cloud-cli",
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/alibaba-cloud-cli/icon.png",
-      "description": "Alibaba Cloud CLI workflows with guided installation, credential setup, profile checks, and safe cloud resource operations.",
+      "description": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
       "description_i18n": {
-        "en": "Alibaba Cloud CLI workflows with guided installation, credential setup, profile checks, and safe cloud resource operations.",
-        "zh-CN": "阿里云 CLI 工作流：引导安装最新版 aliyun、配置凭证与 profile，并安全执行云资源查询和操作。"
+        "en": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+        "zh-CN": "阿里云 CLI 工作流：配置凭证与 profile，并安全执行云资源查询和操作。"
       },
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Z.ai",
         "url": "https://z.ai"
@@ -503,6 +503,29 @@
         "base",
         "calendar",
         "messaging"
+      ]
+    },
+    {
+      "name": "tencent-meeting-cli",
+      "source": "./plugins/tencent-meeting-cli",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tencent-meeting-cli/icon.png",
+      "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+      "description_i18n": {
+        "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+        "zh-CN": "腾讯会议 CLI 工作流：OAuth2 授权、会议管理、录制管理和参会报告查询。"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "productivity",
+      "keywords": [
+        "tencent-meeting",
+        "tencentmeeting",
+        "meeting",
+        "cli",
+        "oauth2"
       ]
     }
   ]
