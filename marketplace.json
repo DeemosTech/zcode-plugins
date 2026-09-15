@@ -532,6 +532,73 @@
         "cli",
         "oauth2"
       ]
+    },
+    {
+      "name": "dingtalk-cli",
+      "displayName": "DingTalk CLI",
+      "displayName_i18n": {
+        "en": "DingTalk CLI",
+        "zh-CN": "钉钉 CLI"
+      },
+      "source": "./plugins/dingtalk-cli",
+      "description": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+      "description_i18n": {
+        "en": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+        "zh-CN": "钉钉 Workspace CLI 工作流：OAuth/设备授权、验证组织账号，并按需安装上游 Skills。"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+      "repository": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+      "license": "Apache-2.0",
+      "keywords": [
+        "dingtalk",
+        "dws",
+        "workspace",
+        "chat",
+        "docs",
+        "calendar",
+        "tasks"
+      ],
+      "category": "productivity",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/dingtalk-cli/icon.png"
+    },
+    {
+      "name": "wecom-cli",
+      "displayName": "WeCom CLI",
+      "displayName_i18n": {
+        "en": "WeCom CLI",
+        "zh-CN": "企业微信 CLI"
+      },
+      "source": "./plugins/wecom-cli",
+      "description": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+      "description_i18n": {
+        "en": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+        "zh-CN": "企业微信 CLI 工作流：覆盖消息、文档、表格、邮件、日历、会议、通讯录和待办，并支持扫码授权与状态检查。"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "homepage": "https://github.com/WecomTeam/wecom-cli",
+      "repository": "https://github.com/WecomTeam/wecom-cli",
+      "license": "MIT",
+      "keywords": [
+        "wecom",
+        "wechat-work",
+        "wecom-cli",
+        "message",
+        "docs",
+        "sheets",
+        "calendar",
+        "todo"
+      ],
+      "category": "productivity",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wecom-cli/icon.png"
     }
   ]
 }

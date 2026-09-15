@@ -717,6 +717,15 @@
     "sha256": "5c83bd5e6dea6e97e81404b4e8d69a1fdd5e12724af8b83eda9aaf08fd031a58"
   },
   {
+    "name": "dingtalk-cli",
+    "icon": "dingtalk-cli/icon.png",
+    "source": "https://gw.alicdn.com/imgextra/i3/O1CN014ZbI6ZTEhdC0ttN2_!!6000000003783-2-tps-444-444.png",
+    "matchedBy": "official-homepage-favicon",
+    "homepage": "https://www.dingtalk.com",
+    "mimeType": "image/png",
+    "sha256": "b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d"
+  },
+  {
     "name": "discord",
     "icon": "discord/icon.png",
     "source": "https://github.com/discord.png?size=512",
@@ -1981,6 +1990,15 @@
     "homepage": "https://villagesql.com",
     "mimeType": "image/png",
     "sha256": "3bc9628c8e6cc8962860e2159eb723532dbe418316c8964b210745f4b8475440"
+  },
+  {
+    "name": "wecom-cli",
+    "icon": "wecom-cli/icon.png",
+    "source": "https://wwcdn.weixin.qq.com/node/ww/wwmng/style/images/index_share_logo$13c64306.png",
+    "matchedBy": "official-homepage-share-image",
+    "homepage": "https://work.weixin.qq.com",
+    "mimeType": "image/png",
+    "sha256": "f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be"
   },
   {
     "name": "windsor-ai",

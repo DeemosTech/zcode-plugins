@@ -22,6 +22,8 @@ Use this repository to browse available plugins, install the marketplace in comp
 | [**gitlab**](./plugins/gitlab) | `developer-tools` | GitLab CLI workflows for merge requests, issues, CI/CD, repositories, releases, and API operations, including self-managed instances. |
 | [**alibaba-cloud-cli**](./plugins/alibaba-cloud-cli) | `developer-tools` | Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations. |
 | [**lark-cli**](./plugins/lark-cli) | `utilities` | Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login. |
+| [**dingtalk-cli**](./plugins/dingtalk-cli) | `productivity` | DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills. |
+| [**wecom-cli**](./plugins/wecom-cli) | `productivity` | WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication. |
 | [**video2code**](./plugins/video2code) | `productivity` | Replicate a webpage from a screen recording or URL: record with the built-in WebView, observe frames, scaffold a React app, and verify against the source. |
 
 ### Finance plugins
