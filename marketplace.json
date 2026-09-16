@@ -599,6 +599,114 @@
       ],
       "category": "productivity",
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wecom-cli/icon.png"
+    },
+    {
+      "name": "hexin",
+      "description": "MCP services for RoyalFlush iFinD stock, global stock, index, fund, and bond data.",
+      "description_i18n": {
+        "en": "MCP services for RoyalFlush iFinD stock, global stock, index, fund, and bond data.",
+        "zh-CN": "同花顺股票、海外股票、指数、基金与债券数据 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "hexin",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "同花顺",
+      "displayName_i18n": {
+        "en": "RoyalFlush iFinD",
+        "zh-CN": "同花顺"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/hexin",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/hexin/icon.png"
+    },
+    {
+      "name": "wind",
+      "description": "MCP services for Wind stock, global stock, index, fund, bond, economic, and document data.",
+      "description_i18n": {
+        "en": "MCP services for Wind stock, global stock, index, fund, bond, economic, and document data.",
+        "zh-CN": "万得股票、海外股票、指数、基金、债券、宏观经济与公告研报数据 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "wind",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "Wind 万得",
+      "displayName_i18n": {
+        "en": "Wind",
+        "zh-CN": "Wind 万得"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/wind",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wind/icon.png"
+    },
+    {
+      "name": "tianyancha",
+      "description": "MCP service for Tianyancha company information queries.",
+      "description_i18n": {
+        "en": "MCP service for Tianyancha company information queries.",
+        "zh-CN": "天眼查企业信息查询 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "tianyancha",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "天眼查",
+      "displayName_i18n": {
+        "en": "Tianyancha",
+        "zh-CN": "天眼查"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/tianyancha",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tianyancha/icon.png"
+    },
+    {
+      "name": "finance-search",
+      "description": "MCP services for SEC EDGAR filing search and financial web and news search.",
+      "description_i18n": {
+        "en": "MCP services for SEC EDGAR filing search and financial web and news search.",
+        "zh-CN": "SEC EDGAR 文件检索与财经网页、新闻搜索 MCP 服务。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "keywords": [
+        "finance-search",
+        "finance",
+        "mcp"
+      ],
+      "displayName": "金融聚合搜索",
+      "displayName_i18n": {
+        "en": "Financial Aggregated Search",
+        "zh-CN": "金融聚合搜索"
+      },
+      "requiresPaidPlan": true,
+      "source": "./plugins/finance-search",
+      "category": "finance",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/finance-search/icon.png"
     }
   ]
 }
