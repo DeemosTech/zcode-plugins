@@ -13,12 +13,12 @@ group workspace selected during OAuth authorization.
 ## Install and connect
 
 1. After publication, install and enable **Hyper3D Rodin** in ZCode's plugin
-   manager. To test this contribution locally, open the **Discover** tab, select
-   **+**, and add the local marketplace checkout containing `marketplace.json`
-   and `plugins/hyper3d-rodin/`. Install and enable the plugin from that market.
+   manager.
 2. Use ZCode's MCP authentication controls to sign in to Hyper3D in the browser.
    Review the requesting client, select the billing workspace, and authorize
-   access. No API key, password, cookie, or session token belongs in chat or in
+   access. Select the MCP scope used by your active project; authorization in
+   one scope does not mean another scope is connected. No API key, password,
+   cookie, or session token belongs in chat or in
    this plugin's configuration.
 3. Verify that the Hyper3D tools are available in the session. Tool discovery
    alone does not prove that OAuth or authenticated calls work. If the host has
@@ -44,7 +44,7 @@ Reconnect to change the authorized account or billing workspace.
 - “Split my completed Rodin model with generation ID … into parts using BANG.”
 - “Download the completed model into this project's assets directory.”
 
-The Skill guides text/image submission, bounded progress waits, and result
+The Skill guides text/image submission, spaced status checks, and result
 retrieval. Uploads accept 1–5 supported images, each at most 20 MiB. ZCode must
 read the actual files, request upload URLs, and perform successful HTTP PUTs
 before starting an image-based generation. If uploading is unavailable, the
@@ -57,7 +57,7 @@ does not silently omit the images.
 | `rodin_generate` | Submit a Rodin generation; consumes credits |
 | `rodin_generate_bang` | Split an owned, completed Rodin generation; consumes credits |
 | `rodin_get_status` | Read a task's status and stage |
-| `rodin_wait` | Wait up to 45 seconds and return the current status |
+| `rodin_wait` | Server-side wait; prefer status checks in ZCode (see verification) |
 | `rodin_get_result` | Retrieve the result page and temporary file URLs |
 
 The server also advertises `rodin_import_images`, which is for ChatGPT Chat
@@ -72,7 +72,10 @@ the live tool schemas; current model formats are GLB, USDZ, FBX, OBJ, and STL.
   `api.hyper3d.com`; browser sign-in and result pages use Hyper3D's web service
   at `hyper3d.ai` and the endpoints advertised by OAuth metadata. Image uploads
   and requested file downloads also access the storage/CDN hosts in the signed
-  URLs returned by Hyper3D. These URLs are temporary; do not log or share them.
+  URLs returned by Hyper3D. These URLs are temporary; avoid printing or sharing them. MCP responses and
+  upload/download tool cards may retain signed URLs in ZCode history; this
+  plugin cannot guarantee host-side redaction. Redact them before sharing logs
+  or screenshots, and use host secret-redaction features when available.
 - **Data:** Prompts, selected reference images, generation settings, and task
   identifiers are sent to Hyper3D as needed. The plugin does not request a
   repository upload. Status/result access is limited to the authorized user's
@@ -111,20 +114,21 @@ identifies the service; no trademark rights are granted. The license does not
 license the hosted service or generated assets, which remain subject to
 Hyper3D's applicable account and service terms.
 
-## Manual verification
+## Verification
 
-Before release, verify these steps in ZCode:
+Version 0.1.0 was exercised on macOS arm64 with ZCode 3.14.3 (build
+3.14.3.7762): plugin installation, Skill loading, seven-tool
+discovery, project-scoped OAuth, reference-image PUT upload, one explicitly
+authorized image-to-3D generation, status/result retrieval, and opening the
+completed model's permanent result page all succeeded. Restarting ZCode and
+reading the same task succeeded without another login.
 
-1. Install from the local marketplace and confirm the plugin and Skill load.
-   The marketplace icon's official CDN URL becomes available after publication.
-2. Complete OAuth login and test token refresh/reconnection. Confirm an
-   authenticated status read against a generation owned by the test account.
-3. With an explicitly requested, credit-consuming test, generate one model,
-   wait for completion, and open the permanent result page. Separately exercise
-   reference-image PUT upload, BANG, and a requested file download.
-4. Confirm that connection/status checks do not submit generations and that
-   errors do not cause automatic resubmission of paid tasks.
+`rodin_wait` hit a 60-second host timeout. A subsequent `rodin_get_status`
+confirmed completion; no paid task was resubmitted. Version 0.1.1 changes the
+Skill to prefer spaced status checks and documents signed URLs in tool history. These revisions were checked
+statically, but 0.1.1 has not been reinstalled and exercised in ZCode.
 
-ZCode installation, OAuth/refresh, and end-to-end generation have not yet been
-verified for this contribution. Successful protocol discovery or repository
-validation does not substitute for those client checks.
+Token-expiry refresh, account/workspace switching, BANG, text-only generation,
+file downloads, and insufficient-credit/entitlement errors remain untested.
+A successful restart does not establish token-expiry refresh support. Any
+additional paid test needs an explicit user request.
