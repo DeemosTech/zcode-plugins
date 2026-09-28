@@ -46,7 +46,7 @@ HTTP PUT，再提交图片生成。如果无法上传，Agent 会说明限制并
 | `rodin_generate` | 提交 Rodin 生成任务，消耗额度 |
 | `rodin_generate_bang` | 拆分当前授权用户拥有的已完成 Rodin 模型，消耗额度 |
 | `rodin_get_status` | 查询任务状态和阶段 |
-| `rodin_wait` | 服务端等待；ZCode 优先使用状态查询，见验证记录 |
+| `rodin_wait` | 服务端等待；ZCode 优先使用状态查询 |
 | `rodin_get_result` | 获取结果页面和临时文件地址 |
 
 服务还会声明 `rodin_import_images`，但它仅用于 ChatGPT Chat 附件，Skill 明确要求
@@ -68,8 +68,6 @@ Schema 为准；目前模型格式包括 GLB、USDZ、FBX、OBJ 和 STL。
   首次收费提交前说明额度消耗，不会仅为测试连接而生成模型。这些调用不具备幂等性：
   超时或连接异常后应查询已知任务，或让用户在 Hyper3D Mine 检查后再决定是否重新提交。
   额度不足或缺少权益时会报告错误，不会擅自更换工作空间或修改用户要求的参数。
-- **隐私：** 后端会将团队工作空间和付费订阅用户的生成设为私有；免费个人账号的
-  生成不保证私有。MCP 没有提供隐私设置参数。
 - **本地执行与文件：** 插件不包含本地 MCP 服务端、可执行程序、安装脚本、命令组件
   或 Hooks，也不需要额外的 Node.js/Python 运行时或模型 API Key。ZCode 管理安装及
   OAuth 状态。Agent 可能使用宿主的文件/网络工具或 shell 命令检查选定图片并上传。
@@ -78,25 +76,8 @@ Schema 为准；目前模型格式包括 GLB、USDZ、FBX、OBJ 和 STL。
 - **结果：** 任务完成后展示永久 `display_url`。临时 `files[].url` 仅用于用户要求的
   文件下载，不作为面向用户的结果链接。
 
-## 来源与许可证
+## 许可证
 
-MCP 服务由 Deemos 运营。Skill 改编自 Deemos 的 Hyper3D Rodin 集成；市场图标
-`assets/hyper3d-rodin/icon.jpg` 复用 Deemos WorkBuddy 分发包中的 Hyper3D 图标。
-没有打包第三方可执行代码。
-
-插件配置、文档和 Skill 使用与本市场一致的 [Apache License 2.0](./LICENSE)。
-Hyper3D 图标用于标识服务，不授予商标权。该许可证不涵盖在线服务或生成资产，
-它们仍受 Hyper3D 适用的账号及服务条款约束。
-
-## 验证记录
-
-已在 macOS arm64、ZCode 3.14.3（构建 3.14.3.7762）验证 0.1.0：插件安装、
-Skill 加载、七个工具发现、项目作用域 OAuth、参考图片 PUT 上传、一次明确授权的
-图片生成、状态及结果查询、打开已完成模型的永久结果页均成功。重启 ZCode 后，
-无需再次登录即可查询同一任务。
-
-`rodin_wait` 遇到宿主 60 秒超时，随后通过 `rodin_get_status` 确认完成，没有重复
-提交收费任务。0.1.1 将 Skill 默认监控改为间隔状态查询，并补充工具历史中签名 URL 的说明。这些修订已通过静态检查，尚未重新安装到 ZCode 实测。
-
-Token 到期刷新、账号/工作空间切换、BANG、纯文字生成、文件下载、额度不足及权益
-错误尚未验证。重启后可用不代表已验证 Token 到期刷新。新增收费测试需要用户明确要求。
+插件配置、Skill 和文档采用 [MIT License](./LICENSE)。远端 MCP 服务由 Deemos
+运营；其服务端实现及生成资产不在该许可证范围内，仍受 Hyper3D 适用条款约束。
+Hyper3D 图标用于标识服务，不授予商标权。

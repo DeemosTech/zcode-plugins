@@ -25,8 +25,7 @@ a new paid task. Do not claim to know the balance or exact price from this MCP.
    For image-only generation omit `prompt` instead of sending an empty string.
 2. Save `generation_id` and `display_url`. Do not present the result-page link
    until the generation completes.
-3. Call `rodin_get_status` with the saved `generation_id`. Prefer this in
-   ZCode: `rodin_wait` hit a 60-second host timeout during client testing.
+3. Monitor progress with `rodin_get_status` using the saved `generation_id`.
 4. While status is `queued` or `processing`, leave a reasonable interval
    (for example, 10–15 seconds) between checks using a host-supported delay.
    Do not busy-poll; if the host cannot delay, report the current state and
@@ -114,7 +113,7 @@ Call `rodin_generate_bang` once with `asset_id` and requested options:
 Save the new `generation_id` and use the same spaced `rodin_get_status`
 workflow above, then retrieve its result with `rodin_get_result`.
 
-## Billing, privacy, and recovery
+## Billing and recovery
 
 - `rodin_generate` and `rodin_generate_bang` consume credits and are not
   idempotent. Never automatically retry either tool after a timeout or
@@ -122,9 +121,6 @@ workflow above, then retrieve its result with `rodin_get_result`.
   to inspect Hyper3D Mine before deciding whether to submit another generation.
 - On insufficient balance or unavailable entitlement, report the error; do not
   silently change the billing workspace or downgrade requested settings.
-- The backend makes group-workspace and paid-subscriber generations private.
-  Do not promise that a free personal-account generation is private; there is
-  no MCP privacy parameter.
 - Status/result access is limited to the authorized user's generations. A group
   billing grant does not imply access to other members' models.
 - Do not echo presigned upload/download URLs or sensitive headers in responses

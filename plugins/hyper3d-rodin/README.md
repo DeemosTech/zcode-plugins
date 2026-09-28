@@ -57,7 +57,7 @@ does not silently omit the images.
 | `rodin_generate` | Submit a Rodin generation; consumes credits |
 | `rodin_generate_bang` | Split an owned, completed Rodin generation; consumes credits |
 | `rodin_get_status` | Read a task's status and stage |
-| `rodin_wait` | Server-side wait; prefer status checks in ZCode (see verification) |
+| `rodin_wait` | Server-side wait; prefer status checks in ZCode |
 | `rodin_get_result` | Retrieve the result page and temporary file URLs |
 
 The server also advertises `rodin_import_images`, which is for ChatGPT Chat
@@ -87,9 +87,6 @@ the live tool schemas; current model formats are GLB, USDZ, FBX, OBJ, and STL.
   or ask the user to inspect Hyper3D Mine before deciding on a new submission.
   Insufficient balance or entitlement is reported without silently changing
   the workspace or requested settings.
-- **Privacy:** The backend makes group-workspace and paid-subscriber generations
-  private. Free personal-account generations are not guaranteed private. The
-  MCP exposes no privacy-setting parameter.
 - **Local execution and files:** The package has no local MCP server, bundled
   executables, install scripts, commands, or hooks, and requires no additional
   Node.js/Python runtime or model API key. ZCode manages installation and OAuth
@@ -101,34 +98,10 @@ the live tool schemas; current model formats are GLB, USDZ, FBX, OBJ, and STL.
 - **Results:** Show the permanent `display_url` after completion. Temporary
   `files[].url` values are for requested downloads, not user-facing links.
 
-## Sources and license
+## License
 
-The MCP service is operated by Deemos. The Skill is adapted from Deemos's
-Hyper3D Rodin integration, and the marketplace icon at
-`assets/hyper3d-rodin/icon.jpg` is the existing Hyper3D icon from Deemos's
-WorkBuddy distribution. No third-party executable code is bundled.
-
-The plugin configuration, documentation, and Skill use the
-[Apache License 2.0](./LICENSE), matching this marketplace. The Hyper3D icon
-identifies the service; no trademark rights are granted. The license does not
-license the hosted service or generated assets, which remain subject to
-Hyper3D's applicable account and service terms.
-
-## Verification
-
-Version 0.1.0 was exercised on macOS arm64 with ZCode 3.14.3 (build
-3.14.3.7762): plugin installation, Skill loading, seven-tool
-discovery, project-scoped OAuth, reference-image PUT upload, one explicitly
-authorized image-to-3D generation, status/result retrieval, and opening the
-completed model's permanent result page all succeeded. Restarting ZCode and
-reading the same task succeeded without another login.
-
-`rodin_wait` hit a 60-second host timeout. A subsequent `rodin_get_status`
-confirmed completion; no paid task was resubmitted. Version 0.1.1 changes the
-Skill to prefer spaced status checks and documents signed URLs in tool history. These revisions were checked
-statically, but 0.1.1 has not been reinstalled and exercised in ZCode.
-
-Token-expiry refresh, account/workspace switching, BANG, text-only generation,
-file downloads, and insufficient-credit/entitlement errors remain untested.
-A successful restart does not establish token-expiry refresh support. Any
-additional paid test needs an explicit user request.
+The plugin configuration, Skill, and documentation are licensed under the
+[MIT License](./LICENSE). The remote MCP service is operated by Deemos;
+its server implementation and generated assets are outside this license and
+remain subject to Hyper3D's applicable terms. The Hyper3D icon identifies the
+service and does not grant trademark rights.
